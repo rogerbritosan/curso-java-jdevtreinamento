@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Aluno {
@@ -14,6 +16,8 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
+	
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
 	// construtor padrão
 	public Aluno() {
@@ -110,12 +114,25 @@ public class Aluno {
 		this.serieMatriculado = serieMatriculado;
 	}
 
+	public double getMediaNota() {
+		return 0;
+	}
+	
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota();
+		if(media >= 7) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + "]";
+				+ serieMatriculado + ", disciplinas=" + disciplinas + "]";
 	}
 
 	@Override
