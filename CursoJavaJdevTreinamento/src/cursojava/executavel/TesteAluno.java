@@ -9,7 +9,7 @@ public class TesteAluno {
 		Aluno aluno1 = new Aluno();
 		aluno1.nome = "Rogério";
 		
-		System.out.println(aluno1.nome);
+		System.out.println(aluno1.nome); 
 		
 		Aluno aluno2 = new Aluno();
 		
