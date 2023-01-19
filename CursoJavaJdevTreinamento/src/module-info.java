@@ -6,4 +6,5 @@
  *
  */
 module CursoJavaJdevTreinamento {
+	requires java.desktop;
 }
