@@ -1,4 +1,4 @@
-package executavel;
+package cursojava.base;
 
 import java.math.BigDecimal;
 

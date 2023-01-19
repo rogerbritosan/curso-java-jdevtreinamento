@@ -1,4 +1,4 @@
-package executavel;
+package cursojava.base;
 
 public class TipoChar {
 	
