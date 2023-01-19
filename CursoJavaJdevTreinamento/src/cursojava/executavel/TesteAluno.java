@@ -16,7 +16,7 @@ public class TesteAluno {
 		System.out.println("Data de nasc: " + aluno1.getDataNascimento());
 		
 		Aluno aluno2 = new Aluno();
-		aluno2.setNome("Brito");
+		aluno2.setNome("Rogério");
 		aluno2.setIdade(25);
 		aluno2.setDataNascimento("01/10/1980");
 		
@@ -32,7 +32,18 @@ public class TesteAluno {
 		
 		// com o toString definido
 		System.out.println(aluno1);
-
+		
+		System.out.println("\n");
+		
+		// utilizando equals e hashcode para comparar valores
+		// pra isso, foi gerado o equals/hashcode apenas do nome
+		if(aluno1.equals(aluno2)) {
+			System.out.println("Alunos iguais");
+		} else {
+			System.out.println("Alunos diferentes");
+		}
+		
+		
 	}
 
 }
