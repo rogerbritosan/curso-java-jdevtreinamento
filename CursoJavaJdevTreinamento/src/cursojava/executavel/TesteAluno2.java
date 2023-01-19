@@ -24,6 +24,10 @@ public class TesteAluno2 {
 		aluno1.getDisciplinas().add(disciplina1);
 		aluno1.getDisciplinas().add(disciplina2);
 
+		System.out.println(aluno1);
+		System.out.println("Média do aluno: " + aluno1.getMediaNota());
+		System.out.println("O aluno " + aluno1.getNome() + " foi aprovado? " + aluno1.getAlunoAprovado());
+		
 	}
 
 }
