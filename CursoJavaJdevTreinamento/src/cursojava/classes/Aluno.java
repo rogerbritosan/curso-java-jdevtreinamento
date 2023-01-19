@@ -141,6 +141,13 @@ public class Aluno {
 			return false;
 		}
 	}
+	
+	public String getAlunoResultado() {
+		if(getAlunoAprovado()) {
+			return "Aprovado";
+		}
+		return "Reprovado";
+	}
 
 	@Override
 	public String toString() {
