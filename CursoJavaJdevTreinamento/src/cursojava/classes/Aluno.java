@@ -16,8 +16,16 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	
+
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
+	}
 
 	// construtor padrão
 	public Aluno() {
@@ -115,12 +123,19 @@ public class Aluno {
 	}
 
 	public double getMediaNota() {
-		return 0;
+		
+		double somaNotas = 0;
+		
+		for(Disciplina disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		
+		return somaNotas / disciplinas.size();
 	}
-	
+
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
-		if(media >= 7) {
+		if (media >= 7) {
 			return true;
 		} else {
 			return false;
@@ -151,8 +166,5 @@ public class Aluno {
 		Aluno other = (Aluno) obj;
 		return Objects.equals(nome, other.nome);
 	}
-	
-	
-	
 
 }
