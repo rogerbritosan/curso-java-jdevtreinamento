@@ -1,4 +1,4 @@
-package operacoeslogicascondicionais;
+package executavel;
 
 public class OperacoesLogicasAninhadas {
 	

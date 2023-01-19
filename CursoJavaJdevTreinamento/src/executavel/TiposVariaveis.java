@@ -1,4 +1,4 @@
-package tiposevariaveis;
+package executavel;
 
 import java.math.BigDecimal;
 
