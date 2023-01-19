@@ -14,6 +14,17 @@ public class EstruturaRepeticaoContinue {
 			}
 			System.out.println("Número: " + numero);
 		}
+		
+		System.out.println();
+		System.out.println("------------------ outro exemplo ------------------");
+		System.out.println();
+		
+		for(int numero = 0; numero <= 10; numero++) {
+			if(numero == 3 || numero == 6 || numero == 9) {
+				System.out.println("    Yes!!! Encontrei o número " + numero);
+			}
+			System.out.println("Número " + numero + " neste momento.");
+		}
 
 	}
 
