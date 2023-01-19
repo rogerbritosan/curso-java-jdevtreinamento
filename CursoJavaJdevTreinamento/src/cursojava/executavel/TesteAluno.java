@@ -29,6 +29,9 @@ public class TesteAluno {
 		Aluno aluno4 = new Aluno("Roger");
 		
 		Aluno aluno5 = new Aluno("Roger", 39);
+		
+		// com o toString definido
+		System.out.println(aluno1);
 
 	}
 
