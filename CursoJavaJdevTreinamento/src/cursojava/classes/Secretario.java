@@ -54,11 +54,11 @@ public class Secretario extends Pessoa implements PermitirAcesso {
 		return 1000 * 1.5;
 	}
 
-	@Override
-	public boolean autenticar() {
-		// exemplo básico
-		return login.equals("admin") && senha.equals("admin");
-	}
+//	@Override
+//	public boolean autenticar() {
+//		// exemplo básico
+//		return login.equals("admin") && senha.equals("admin");
+//	}
 
 	public String getLogin() {
 		return login;
@@ -74,6 +74,11 @@ public class Secretario extends Pessoa implements PermitirAcesso {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	@Override
+	public boolean autenticar(String login, String senha) {
+		return login.equals("admin") && senha.equals("admin");
 	}
 
 }

@@ -10,19 +10,20 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
 import cursojava.constantes.StatusAluno;
+import cursojava.interfaces.PermitirAcesso;
 
-public class ListaAlunosSimplesValidacao {
+public class InterfaceComParametros {
 
 	public static void main(String[] args) {
+		
+		// 10.12 - Método de interface com parâmetros
 
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
-		Secretario secretario = new Secretario();
-		secretario.setLogin(login);
-		secretario.setSenha(senha);
+		PermitirAcesso secretario = new Secretario();		
 			
-		if (secretario.autenticar(login, senha)) {
+		if (new Secretario().autenticar(login, senha)) {
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 
