@@ -11,7 +11,7 @@ import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
 import cursojava.constantes.StatusAluno;
 
-public class ListaAlunosSimplesValidacao {
+public class ListaAlunosLogin {
 
 	public static void main(String[] args) {
 

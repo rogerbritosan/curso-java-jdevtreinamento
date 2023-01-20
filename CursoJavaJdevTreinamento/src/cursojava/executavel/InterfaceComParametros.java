@@ -17,13 +17,14 @@ public class InterfaceComParametros {
 	public static void main(String[] args) {
 		
 		// 10.12 - Método de interface com parâmetros
+		// 10.13 - Interfaces e construtores
 
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
-		PermitirAcesso secretario = new Secretario();		
+		PermitirAcesso permitirAcesso = new Secretario(login, senha);		
 			
-		if (new Secretario().autenticar(login, senha)) {
+		if (permitirAcesso.autenticar()) {
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 

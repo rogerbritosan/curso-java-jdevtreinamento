@@ -7,6 +7,8 @@ public interface PermitirAcesso {
 	// obrigatório pra quem implementa
 	//public boolean autenticar();
 	
+	public boolean autenticar();
+	
 	public boolean autenticar(String login, String senha);
 	
 }
