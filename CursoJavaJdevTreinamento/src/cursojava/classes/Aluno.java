@@ -6,15 +6,8 @@ import java.util.Objects;
 
 import cursojava.constantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
@@ -35,17 +28,17 @@ public class Aluno {
 	}
 
 	public Aluno(String nome) {
-		this.nome = nome;
+		super.nome = nome;
 	}
 
 	public Aluno(String nome, int idade) {
-		this.nome = nome;
-		this.idade = idade;
+		super.nome = nome;
+		super.idade = idade;
 	}
 
 	// getters and setters
 	public String getNome() {
-		return this.nome;
+		return super.nome;
 	}
 
 	public void setNome(String nome) {
@@ -125,13 +118,13 @@ public class Aluno {
 	}
 
 	public double getMediaNota() {
-		
+
 		double somaNotas = 0;
-		
-		for(Disciplina disciplina : disciplinas) {
+
+		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
 		}
-		
+
 		return somaNotas / disciplinas.size();
 	}
 
@@ -143,9 +136,9 @@ public class Aluno {
 			return false;
 		}
 	}
-	
+
 	public String getAlunoResultado() {
-		if(getAlunoAprovado()) {
+		if (getAlunoAprovado()) {
 			return StatusAluno.APROVADO;
 		}
 		return StatusAluno.REPROVADO;
@@ -174,6 +167,25 @@ public class Aluno {
 			return false;
 		Aluno other = (Aluno) obj;
 		return Objects.equals(nome, other.nome);
+	}
+
+	// método sobrescrito
+
+	@Override
+	public boolean maiorIdade() {
+		return idade >= 21;
+		// return super.maiorIdade();
+	}
+
+	public String msgMaiorIdade() {
+		return this.maiorIdade() ? "Aluno maior de idade" : "Menor de idade";
+		//return super.maiorIdade() ? "Aluno maior de idade" : "Menor de idade";
+	}
+
+	@Override
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 800;
 	}
 
 }
