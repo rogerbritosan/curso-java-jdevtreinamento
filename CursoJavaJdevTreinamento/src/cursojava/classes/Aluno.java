@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import cursojava.constantes.StatusAluno;
+
 public class Aluno {
 
 	private String nome;
@@ -144,9 +146,9 @@ public class Aluno {
 	
 	public String getAlunoResultado() {
 		if(getAlunoAprovado()) {
-			return "Aprovado";
+			return StatusAluno.APROVADO;
 		}
-		return "Reprovado";
+		return StatusAluno.REPROVADO;
 	}
 
 	@Override
