@@ -52,7 +52,7 @@ public class RemovendoDisciplinas {
 						+ "\n";
 			}
 
-			int confirmaRemocao = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+			int confirmaRemocao = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?"); 
 
 			while (confirmaRemocao == 0) {
 
