@@ -7,24 +7,27 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
-import cursojava.classes.Secretario;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
-import cursojava.interfaces.PermitirAcesso;
 
-public class InterfaceComParametros {
+public class InterfacePolimorfismoExtremo {
 
 	public static void main(String[] args) {
 		
+		// 10.12 - Método de interface com parâmetros
+		// 10.13 - Interfaces e construtores
 		// 10.14 - Interfaces e o polimorfismo extremo
 
 		String login = JOptionPane.showInputDialog("Informe o login");
-		String senha = JOptionPane.showInputDialog("Informe a senha");
+		String senha = JOptionPane.showInputDialog("Informe a senha");	
 		
-		PermitirAcesso permitirAcesso = new Secretario(login, senha);		
+		// FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
 		
-		// travar o contrato p/ autorizar somente quem realmente tem o contrato 100% legítimo
-		if (permitirAcesso.autenticar()) {
+		// PermitirAcesso permitirAcesso = new Secretario(login, senha);		
+			
+		if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {
 
 			List<Aluno> alunos = new ArrayList<Aluno>();
 
