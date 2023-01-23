@@ -29,10 +29,6 @@ public class TestandoExcecoes6 {
 			String login = JOptionPane.showInputDialog("Informe o login");
 			String senha = JOptionPane.showInputDialog("Informe a senha");
 
-			// FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
-
-			// PermitirAcesso permitirAcesso = new Secretario(login, senha);
-
 			if (new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) {
 
 				List<Aluno> alunos = new ArrayList<Aluno>();
