@@ -5,11 +5,11 @@ import javax.swing.JOptionPane;
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 
-public class ArrayVetor5 {
+public class ArrayVetor6 {
 
 	public static void main(String[] args) {
 
-		// 13.8 - Descobrindo a maior nota do aluno
+		// 13.9 - Descobrindo a menor nota do aluno
 
 		Aluno aluno = new Aluno();
 		aluno.setNome("Rogério Brito dos Santos");
@@ -44,13 +44,13 @@ public class ArrayVetor5 {
 				
 				if(pos == 0) {
 					notaMax = d.getNota()[pos];
-				} else if (d.getNota()[pos] > notaMax) {
+				} else if (d.getNota()[pos] < notaMax) {
 					notaMax = d.getNota()[pos];
 				}
 				
 			}
 			
-			System.out.println("A maior nota da disciplina " + d.getDisciplina() + " é " + notaMax);
+			System.out.println("A menor nota da disciplina " + d.getDisciplina() + " é " + notaMax);
 			System.out.println();
 
 		}
