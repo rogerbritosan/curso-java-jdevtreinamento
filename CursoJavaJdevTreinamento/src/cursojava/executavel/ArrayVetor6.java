@@ -37,20 +37,20 @@ public class ArrayVetor6 {
 			System.out.println("Disciplina: " + d.getDisciplina());
 			System.out.println("Notas das disciplinas: ");
 			
-			double notaMax = 0.0;
+			double notaMin = 0.0;
 
 			for (int pos = 0; pos < d.getNota().length; pos++) {
 				System.out.println("Nota: " + pos + " é igual = " + d.getNota()[pos]);
 				
 				if(pos == 0) {
-					notaMax = d.getNota()[pos];
-				} else if (d.getNota()[pos] < notaMax) {
-					notaMax = d.getNota()[pos];
+					notaMin = d.getNota()[pos];
+				} else if (d.getNota()[pos] < notaMin) {
+					notaMin = d.getNota()[pos];
 				}
 				
 			}
 			
-			System.out.println("A menor nota da disciplina " + d.getDisciplina() + " é " + notaMax);
+			System.out.println("A menor nota da disciplina " + d.getDisciplina() + " é " + notaMin);
 			System.out.println();
 
 		}
