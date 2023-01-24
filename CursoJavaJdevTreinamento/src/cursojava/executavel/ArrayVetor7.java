@@ -9,7 +9,7 @@ public class ArrayVetor7 {
 
 	public static void main(String[] args) {
 
-		// 13.9 - Descobrindo a menor nota do aluno
+		// 13.10 - Manipulando Array de Objetos
 
 		Aluno aluno = new Aluno();
 		aluno.setNome("Rogério Brito dos Santos");
